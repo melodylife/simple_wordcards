@@ -1,0 +1,9 @@
+{
+  "objectID": ["Schema.Types.ObjectId"],
+  "word": {"type": "String", "required": true},
+  "createTime": {"type": "Date" , "default": "Date.now","require": true},
+  "phonics": {"type": "String", "required": true},
+  "meaning": {"type": "String", "required": true},
+  "example": {"type": "String", "required": true},
+  "ext": ["Schema.Types.Mixed"]
+}

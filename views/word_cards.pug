@@ -1,0 +1,17 @@
+html
+  head
+    link(type='text/css' rel='stylesheet' href='css/word_card.css' charset="utf-8")/
+  body
+  - let wordList = data;
+    div(class='wrapper')
+      each word in wordList
+        div(class='box') 
+          div(id='words')
+            div(id='word' class='innerdivs')
+              p(class='word') #{word.word} 
+            div(id='phonics' class='innerdivs')
+              p(class='phonics') /#{word.phonics}/ 
+          div(id='explain')
+              p(class='explain') Meaning: #{word.meaning} 
+          div(id='example')
+              p(class='example') Example: #{word.example} 
