@@ -7,6 +7,7 @@ RUN chmod -R 777 /home/project
 COPY . /home/project
 
 RUN npm install
+RUN npm install -g forever
 
 EXPOSE 3000
 

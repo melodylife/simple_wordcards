@@ -5,7 +5,7 @@ const app = express();
 const fs = require('fs');
 const mongoose = require('mongoose');
 const port = 3000;
-const localDB = 'mongodb://localhost:27017/words';
+const localDB = 'mongodb://127.0.0.1:27017/words';
 mongoose.connect(localDB, { useNewUrlParser: true , useUnifiedTopology: true});
 mongoose.Promise = global.Promise;
 
@@ -39,13 +39,13 @@ let query = wordsModel.find({});
 });*/
 
 app.set('view engine' , 'pug');
-app.get('/' , (req , res) => {
+/*app.get('/' , (req , res) => {
   res.send("Hello World");
-});
+});8/
 /*app.get('/word_cards' , (req , res) => {
   res.render('word_cards' , {});
 });*/
-app.get('/word_cards' , (req , res) => {
+app.get('/' , (req , res) => {
     let query = wordsModel.find({});
     return query.exec((err , wordList) => {
       //console.log(wordList);
